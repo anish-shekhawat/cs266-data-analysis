@@ -83,7 +83,7 @@ void main()
 			//Precision
 			if (match.size() == mctr && nomatch.size() == nctr)
 			{
-				temp = 0;
+				temp = 1;
 			}
 			else 
 			{
@@ -107,7 +107,7 @@ void main()
 			//Precision
 			if (match.size() == mctr && nomatch.size() == nctr)
 			{
-				temp = 0;
+				temp = 1;
 			}
 			else
 			{
@@ -135,7 +135,7 @@ void main()
 		//Precision
 		if (match.size() == mctr && nomatch.size() == nctr)
 		{
-			temp = 0;
+			temp = 1;
 		}
 		else
 		{
@@ -161,7 +161,7 @@ void main()
 		//Precision
 		if (match.size() == mctr && nomatch.size() == nctr)
 		{
-			temp = 0;
+			temp = 1;
 		}
 		else
 		{
@@ -180,4 +180,25 @@ void main()
 		cout << fpr[i] <<  " -- " << tpr[i] << " -- " << precision[i];
 	}
 	cout << endl;
+
+	//Calculate area under ROC curve
+	float area = 0;
+
+	for (i = 0; i < fpr.size() - 1; i++)
+	{
+		area = area + (((fpr.at(i) - fpr.at(i+1)) * (tpr.at(i) + tpr.at(i + 1))) / 2);
+	}
+
+	cout << "\nArea under ROC curve = " << area;
+
+	//Calculate area under PR curve
+
+	area = 0.0;
+
+	for (i = 0; i < tpr.size() - 1; i++)
+	{
+		area = area + (((tpr.at(i) - tpr.at(i + 1)) * (precision.at(i) + precision.at(i + 1))) / 2);
+	}
+
+	cout << "\nArea under PR curve = " << area;
 }
