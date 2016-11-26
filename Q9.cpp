@@ -172,7 +172,7 @@ void main()
 		precision.push_back(temp);
 	} 
 
-	cout << "FPR " << "--" << " TPR " << "--" << " Precision";
+	cout << "\nFPR " << "--" << " TPR(Recall) " << "--" << " Precision";
 
 	for (i = 0; i < fpr.size(); i++)
 	{
@@ -201,4 +201,6 @@ void main()
 	}
 
 	cout << "\nArea under PR curve = " << area;
+
+	cout << endl;
 }
