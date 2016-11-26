@@ -27,10 +27,6 @@ Please use the [issue tracker](https://github.com/anish-shekhawat/cs266-data-ana
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## Credits
-
-TODO: Write credits
-
 ## License
 
 >You can check out the full license [here](https://github.com/anish-shekhawat/cs266-data-analysis/blob/master/LICENSE)
